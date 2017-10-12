@@ -4,7 +4,8 @@
 
 * { font-family: 'Roboto', sans-serif; }
 
-header {
+header, footer {
+  
   background: #0f0c29;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
@@ -21,6 +22,32 @@ header {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+  }
+
+}
+
+h2 {
+  border-bottom:1px solid #F7F6F6;
+  padding-bottom: 12px;
+}
+
+h3 {
+  background: #F7F6F6;
+  padding: 12px 0px
+}
+
+.col-md-4 h3 {
+  padding: 12px;
+}
+
+span.stars {
+  font-size: 20px;
+  color: green;
+  float: right;
+  margin-top: -5px;
+  
+  &.ignore-mg {
+    margin-top: 0px;
   }
 
 }
