@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     ts = require('gulp-typescript'),
     minify = require('gulp-minify'),
     browserSync = require('browser-sync').create(),
+    imagemin = require('gulp-imagemin'),
     reload = browserSync.reload;
 
 var onError = function(err) {
@@ -76,6 +77,7 @@ gulp.task('img', function() {
 
     return gulp.src('app/img/**')
         .pipe(plumber({ errorHandler: onError }))
+        .pipe(imagemin())
         .pipe(gulp.dest('build/img/'))
         .pipe(browserSync.stream());
 });
